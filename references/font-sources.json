@@ -1,0 +1,308 @@
+{
+  "retrieved_date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "source_home": "https://www.mbusa.com/en/home",
+  "source_stylesheets": [
+    "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/css/globals.css",
+    "https://www.mbusa.com/etc/designs/mb-nafta/css/main.css"
+  ],
+  "license_notice": "Fonts for Daimler AG use only.",
+  "files": [
+    {
+      "filename": "MBCorpoATextCond-Regular-Web.woff2",
+      "family": "MB Corpo A Text Cond Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATextCond-Regular-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATextCond-Regular-Web.woff2",
+      "bytes": 60000,
+      "sha256": "bee2c398c60478af80be79f6e2c7e7bd2505110bf39fba9b1b24c871d6fc24cc"
+    },
+    {
+      "filename": "MBCorpoATextCond-Regular-Web.woff",
+      "family": "MB Corpo A Text Cond Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATextCond-Regular-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATextCond-Regular-Web.woff",
+      "bytes": 74758,
+      "sha256": "8f3658f7c5659e483cf771e7168a447ea9eeb6f1ea3a6023fdffad488c327546"
+    },
+    {
+      "filename": "MBCorpoATitleCond-Regular-Web.woff2",
+      "family": "MB Corpo A Title Cond Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATitleCond-Regular-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATitleCond-Regular-Web.woff2",
+      "bytes": 55720,
+      "sha256": "98da267a7daacf95f8a36b064f7ef5b7d5400b1a1cf9920cc1862e2834125f4e"
+    },
+    {
+      "filename": "MBCorpoATitleCond-Regular-Web.woff",
+      "family": "MB Corpo A Title Cond Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATitleCond-Regular-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoATitleCond-Regular-Web.woff",
+      "bytes": 70839,
+      "sha256": "afb53802c746bb189c6912db63c3320c3a9258bf54c77c9c4a10789b51933dd6"
+    },
+    {
+      "filename": "MBCorpoSText-Regular-Web.woff2",
+      "family": "MB Corpo S Text Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Regular-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Regular-Web.woff2",
+      "bytes": 52100,
+      "sha256": "3428cc3e1dbac8db453a815e3b04929c967991b301dc347294a32981f710fd6a"
+    },
+    {
+      "filename": "MBCorpoSText-Regular-Web.woff",
+      "family": "MB Corpo S Text Web",
+      "weight": 400,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Regular-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Regular-Web.woff",
+      "bytes": 66656,
+      "sha256": "d2b19de060440625b0cf9773ed371f54aa0df7fd17e6bcecf9ac779894c165a0"
+    },
+    {
+      "filename": "MBCorpoSText-Bold-Web.woff2",
+      "family": "MB Corpo S Text Web",
+      "weight": 700,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Bold-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Bold-Web.woff2",
+      "bytes": 51888,
+      "sha256": "9aad26be816a3081203fc1cd4eaf05fbe10ec77cb9f5c6824b6b18751596571e"
+    },
+    {
+      "filename": "MBCorpoSText-Bold-Web.woff",
+      "family": "MB Corpo S Text Web",
+      "weight": 700,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Bold-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSText-Bold-Web.woff",
+      "bytes": 66039,
+      "sha256": "6863d47b06b17f43e2939ac2ac94acb0b564306bbca03b7034a9bc55149b7beb"
+    },
+    {
+      "filename": "MBCorpoSTitle-Light-Web.woff2",
+      "family": "MB Corpo S Title Web",
+      "weight": 300,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Light-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Light-Web.woff2",
+      "bytes": 54808,
+      "sha256": "3207d8eebfc311cb7ddb57a1193ff6704d15bbce13ba4b1370eab7fd2588150f"
+    },
+    {
+      "filename": "MBCorpoSTitle-Light-Web.woff",
+      "family": "MB Corpo S Title Web",
+      "weight": 300,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Light-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Light-Web.woff",
+      "bytes": 68982,
+      "sha256": "4bba0ee054a90c54b2e903c848cb696db4ca27849aa6f7d6fc5121b59ebd45d4"
+    },
+    {
+      "filename": "MBCorpoSTitle-Bold-Web.woff2",
+      "family": "MB Corpo S Title Web",
+      "weight": 700,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Bold-Web.woff2",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Bold-Web.woff2",
+      "bytes": 55712,
+      "sha256": "7e0c68e3800e09d1a12b69e47996acebe9a2bc00ce00cafcc5516737def17f68"
+    },
+    {
+      "filename": "MBCorpoSTitle-Bold-Web.woff",
+      "family": "MB Corpo S Title Web",
+      "weight": 700,
+      "url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Bold-Web.woff",
+      "resolved_url": "https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/assets/fonts/MBCorpoSTitle-Bold-Web.woff",
+      "bytes": 70149,
+      "sha256": "b0aa17d65fc20f5382958f3a0bd2a9fbbddd54f8cc6b957d936daec4de538875"
+    }
+  ],
+  "metadata": [
+    {
+      "filename": "MBCorpoATextCond-Regular-Web.woff",
+      "weight": 400,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    },
+    {
+      "filename": "MBCorpoATitleCond-Regular-Web.woff",
+      "weight": 400,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    },
+    {
+      "filename": "MBCorpoSText-Bold-Web.woff",
+      "weight": 700,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    },
+    {
+      "filename": "MBCorpoSText-Regular-Web.woff",
+      "weight": 400,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    },
+    {
+      "filename": "MBCorpoSTitle-Bold-Web.woff",
+      "weight": 700,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    },
+    {
+      "filename": "MBCorpoSTitle-Light-Web.woff",
+      "weight": 300,
+      "names": {
+        "1": [
+          ""
+        ],
+        "4": [
+          "Font",
+          "¶"
+        ],
+        "0": [
+          "Copyright (c) 2019 by Daimler AG. All rights reserved."
+        ],
+        "2": [
+          "¶"
+        ],
+        "6": [
+          "Font"
+        ],
+        "8": [
+          "Edenspiekermann, URW Type Foundry"
+        ],
+        "9": [
+          "Christoph Koeberlin, Toshiya Izumo"
+        ],
+        "13": [
+          "Fonts for Daimler AG use only."
+        ]
+      }
+    }
+  ]
+}

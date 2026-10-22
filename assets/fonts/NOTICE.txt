@@ -1,0 +1,41 @@
+[mercedes-prototype skill] 本目录只包含下列原包中的 6 个 .woff2 文件(未改写);原包的 .woff 与 preview.html 未随 skill 打包。
+CSS 请使用 ../css/mb-fonts.css 中的复合族,不要使用下文第 3、4 条里的原始家族名。
+Fonts for Daimler AG use only. 本 skill 不授予任何使用或转授权权利。
+----------------------------------------------------------------------
+
+MB Corpo 网页字体资源包
+整理日期：2026-10-20（Asia/Shanghai）
+
+内容
+本包包含奔驰美国官网公开加载的 6 种字形，每种提供 WOFF2 与 WOFF，共 12 个原始字体文件。
+这是网页字体资源子集，未声称覆盖完整 MB Corpo 字库或桌面字体版本。
+- A Text Condensed · Regular: MB Corpo A Text Cond Web / 400
+- A Title Condensed · Regular: MB Corpo A Title Cond Web / 400
+- S Text · Regular: MB Corpo S Text Web / 400
+- S Text · Bold: MB Corpo S Text Web / 700
+- S Title · Light: MB Corpo S Title Web / 300
+- S Title · Bold: MB Corpo S Title Web / 700
+
+使用
+1. 保持 fonts 文件夹与 mb-corpo.css 的相对路径，打开 preview.html 查看效果。
+2. 网页引入：<link rel="stylesheet" href="./mb-corpo.css">
+3. 标题：font-family: "MB Corpo A Title Cond Web", Georgia, serif; font-weight: 400;
+4. 正文：font-family: "MB Corpo S Text Web", Arial, sans-serif; font-weight: 400;
+5. 正文强调使用 700；S Title 在本包提供 300 和 700 两个字重。
+6. 本包为 WOFF/WOFF2 网页版本；需要桌面安装字体时，请向品牌方索取相应授权的桌面版本。
+7. 不附中文字体；中文由项目另行配置的中文字体承接。
+
+来源与核验
+首页：https://www.mbusa.com/en/home
+字体样式：https://nafta-service.mbusa.com/assets/now-ui-core/packages/foundation/0.78.11/css/globals.css
+补充样式：https://www.mbusa.com/etc/designs/mb-nafta/css/main.css
+sources.json 记录各文件的原始 URL、文件大小与 SHA-256。
+原始字体内部名称字段部分为通用 Font，以上显示名依据官网 CSS 与文件名对应关系，未修改字体内部名称、字重或其他信息。
+当前 PTT 原型内嵌标题为 Roboto Condensed、正文为 Source Sans 3；其 local(MB Corpo) 声明只用于查找本机字体。本资源包独立整理，未修改原型。
+
+字体原始版权及使用范围
+Copyright (c) 2019 by Daimler AG. All rights reserved.
+字体内嵌许可原文：Fonts for Daimler AG use only.
+字体制造商：Edenspiekermann, URW Type Foundry。
+本次整理保留原始字体文件和声明，不另行授予使用或转授权权利。项目使用需具备相应授权。
+官方品牌资源入口：https://brand-design.mercedes-benz.com/

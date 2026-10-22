@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mercedes-Benz · Change Management</title>
+<!-- Keep css/ and fonts/ beside this file. No CDN, no network calls. -->
+<link rel="stylesheet" href="css/mb-fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail" id="rail" aria-label="Primary navigation">
+    <div class="brand">
+      <!-- Official star-in-circle logo (assets/brand/mb-star.svg), white fill for the black rail. Do not recolor or redraw. -->
+      <svg viewBox="0 0 38 38" fill="currentColor" role="img" aria-label="Mercedes-Benz"><path d="M35.4544465,9.4999895c-1.6675854-2.8883456-4.0661211-5.2869461-6.9544707-6.9545288C25.6116245.8778901,22.3351164-.0000113,18.9999602-.0000113s-6.6116643.8779014-9.500013,2.5454718c-2.8883495,1.6675829-5.2868861,4.0661834-6.9544579,6.954529C.8779042,12.3883351.0000007,15.6648388.0000007,18.9999905s.8779036,6.6116553,2.5454887,9.4999991c1.6675717,2.8883438,4.0661088,5.2869456,6.9544579,6.9545142,2.8883495,1.6675832,6.1648567,2.545485,9.500013,2.545485s6.6116643-.8779018,9.5000139-2.545485c2.8883514-1.6675685,5.2868871-4.0661704,6.9544725-6.954516,1.6676402-2.8883456,2.5455542-6.1648474,2.5455542-9.5000009s-.8779834-6.6116553-2.5455542-9.4999973ZM1.8999571,18.9999905c0-3.0017169.7901239-5.9505479,2.290984-8.5499634,1.5007929-2.5995498,3.6594907-4.7581912,6.259044-6.2591026,2.444813-1.4115102,5.19865-2.1943806,8.0147432-2.2824819l-2.1816223,15.5229389L3.9306169,27.082194c-1.331722-2.4829084-2.0306614-5.2591831-2.0306598-8.0822035ZM27.550001,33.8090561c-2.5995542,1.5007927-5.5483874,2.2908612-8.5500426,2.2908612s-5.9504747-.7900685-8.5499741-2.2908612c-2.444813-1.4115093-4.499631-3.4050629-5.984056-5.7997344l14.5340301-5.872124,14.5341123,5.872124c-1.4844378,2.3946733-3.5392558,4.3882251-5.9840697,5.7997344ZM34.0693811,27.0821921l-12.3525704-9.6508126-2.1816059-15.5229372c2.8161461.0881012,5.569986.8709716,8.014798,2.282482,2.5994866,1.5009119,4.7581991,3.6595529,6.2589902,6.2591026,1.5008605,2.5994155,2.2909849,5.5483799,2.2909849,8.5499634,0,2.8230204-.6989524,5.5992951-2.0305968,8.0822017Z"/></svg>
+      <div><div class="brand-name">Mercedes-Benz</div><div class="brand-sub">Change Management</div></div>
+    </div>
+    <nav class="nav" aria-label="Workspace">
+      <div class="nav-group">Work</div>
+      <a class="navitem" href="#dashboard" data-view="dashboard"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h7"/></svg>Dashboard<span class="count" id="nav-action">0</span></a>
+      <a class="navitem" href="#changes" data-view="changes"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11"/><path d="M2 6h12M6 6v7.5"/></svg>Changes</a>
+      <div class="nav-group">Inventory</div>
+      <a class="navitem" href="#services" data-view="services"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg>Services</a>
+    </nav>
+    <div class="rail-foot"><span class="dot" style="color:var(--go)"></span>Simulated data · local only</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="btn icon menu-btn" id="menu" aria-label="Open navigation" aria-controls="rail" aria-expanded="false">☰</button>
+      <div class="crumbs"><span>CMP</span><b id="crumb">Dashboard</b></div>
+      <div class="topbar-end">
+        <label class="omni"><span aria-hidden="true">⌕</span><span class="sr-only">Search changes</span><input id="q" type="search" placeholder="Change no., title, service…" autocomplete="off"><span class="kbd" aria-hidden="true">/</span></label>
+        <button class="btn sm" id="theme" aria-pressed="false">Dark</button>
+        <span class="avatar" aria-label="Demo account">ZM</span>
+      </div>
+    </header>
+
+    <main class="canvas" id="main" tabindex="-1">
+      <section data-page="dashboard" aria-labelledby="t-dash">
+        <div class="page-head">
+          <div><div class="eyebrow">Operations / China</div><h1 class="page-title" id="t-dash">Dashboard</h1><p class="page-sub">今日变更概览 · Today’s change workload</p></div>
+          <div class="page-actions"><button class="btn primary" data-new>New change</button></div>
+        </div>
+        <div class="kpis" id="kpis"></div>
+        <div class="sect"><div class="sect-head"><h2 class="sect-title">Needs your action</h2><span class="hint" id="action-hint"></span></div><div class="table-wrap"><table class="grid"><caption class="sr-only">Changes waiting on you</caption><thead><tr><th scope="col">Change</th><th scope="col">Service · Version</th><th scope="col">Status · Next step</th><th scope="col">Risk</th><th scope="col">Window · UTC+8</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="rows-action"></tbody></table></div></div>
+        <div class="sect"><div class="sect-head"><h2 class="sect-title">Upcoming windows</h2></div><div class="panel"><ol class="spine" id="upcoming"></ol></div></div>
+      </section>
+
+      <section data-page="changes" aria-labelledby="t-chg" hidden>
+        <div class="page-head"><div><h1 class="page-title" id="t-chg">Changes</h1></div><div class="page-actions"><button class="btn primary" data-new>New change</button></div></div>
+        <div class="tabs" role="group" aria-label="Scope" id="tabs"></div>
+        <div class="toolbar">
+          <label class="field grow"><span class="sr-only">Search</span><input id="q2" type="search" placeholder="Change no., title, service or version" autocomplete="off"></label>
+          <label class="field"><span class="sr-only">Service</span><select id="f-service"><option value="">All services</option></select></label>
+          <label class="field"><span class="sr-only">Risk</span><select id="f-risk"><option value="">Risk: any</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
+          <button class="btn" id="clear">Clear filters</button>
+        </div>
+        <div class="table-wrap"><table class="grid"><caption class="sr-only">Change records</caption><thead><tr><th scope="col">Change</th><th scope="col">Service · Version</th><th scope="col">Status · Next step</th><th scope="col">Risk</th><th scope="col">Window · UTC+8</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="rows"></tbody></table></div>
+        <div class="pager"><span id="count" role="status" aria-live="polite"></span><span class="end"><button class="btn sm" disabled>Previous</button><span>Page 1 / 1</span><button class="btn sm" disabled>Next</button></span></div>
+      </section>
+
+      <section data-page="services" aria-labelledby="t-svc" hidden>
+        <div class="page-head"><div><h1 class="page-title" id="t-svc">Services</h1><p class="page-sub">Star a service to pin it · 收藏常用服务</p></div>
+          <div class="page-actions"><label class="search-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="sr-only">Search services</span><input id="sq" type="search" placeholder="Search services" autocomplete="off"></label></div></div>
+        <div class="svc-grid" id="svc-grid"></div>
+      </section>
+      <p class="notice" id="feedback" role="status" aria-live="polite" hidden></p>
+    </main>
+  </div>
+</div>
+
+<dialog class="drawer" id="drawer" aria-labelledby="d-title">
+  <div class="dlg-head"><h2 id="d-title"></h2><button class="btn icon" data-close aria-label="Close details">×</button></div>
+  <div class="dlg-body" id="d-body"></div>
+</dialog>
+
+<dialog class="modal" id="new-dlg" aria-labelledby="n-title">
+  <form id="new-form" method="dialog">
+    <div class="dlg-head"><h2 id="n-title">New change</h2><button type="button" class="btn icon" data-close aria-label="Close form">×</button></div>
+    <div class="dlg-body" style="display:grid;gap:16px">
+      <label class="field">Title<input name="title" required maxlength="100" placeholder="Describe the planned change"></label>
+      <label class="field">Service<select name="service" id="n-service"></select></label>
+      <label class="field">Risk<select name="risk"><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
+      <p class="hint">Creates a local mock draft. Records reset on reload.</p>
+    </div>
+    <div class="dlg-foot"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" type="submit">Create draft</button></div>
+  </form>
+</dialog>
+
+<script>
+/* Mock data only. Replace with the real domain model; keep rendering helpers. */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const STATUS={draft:['Draft','idle'],review:['SRE review','wait'],approved:['Approved','go'],running:['In progress','info'],done:['Completed','go'],failed:['Rolled back','stop']};
+const RISK={low:['Low','go'],medium:['Medium','wait'],high:['High','stop']};
+const STEPS=['Submitted','SRE review','Approved','Executing','Completed'];
+const STAGE={draft:0,review:1,approved:2,running:3,done:4,failed:3};
+const TIER={'search-service':'Tier 1','order-service':'Tier 1','ledger-service':'Tier 0','gateway-service':'Tier 1'};
+const changes=[
+ {id:'CMP-2026-000144',title:'搜索集群 AKS 1.28 → 1.29 升级',service:'search-service',version:'AKS 1.29',status:'review',risk:'low',start:'2026-10-22 22:00',end:'2026-10-23 01:00',next:'SRE · 评审回滚手册',mine:true},
+ {id:'CMP-2026-000143',title:'订单高峰前 AKS 节点池扩容',service:'order-service',version:'10 nodes',status:'approved',risk:'low',start:'2026-10-23 14:00',end:'2026-10-23 16:00',next:'DevOps · 等待变更窗口',mine:false},
+ {id:'CMP-2026-000141',title:'网关 TLS 证书轮换',service:'gateway-service',version:'cert-2026-10',status:'running',risk:'medium',start:'2026-10-21 23:00',end:'2026-10-22 00:30',next:'DevOps · 执行中,剩余 25 min',mine:false},
+ {id:'CMP-2026-000138',title:'账务库 PostgreSQL 14 → 16',service:'ledger-service',version:'pg16',status:'review',risk:'high',start:'2026-10-24 01:00',end:'2026-10-24 03:00',next:'SRE · 声明偏离,待评审 Red Lines',mine:true},
+ {id:'CMP-2026-000135',title:'订单服务灰度发布 v3.8.2',service:'order-service',version:'v3.8.2',status:'failed',risk:'medium',start:'2026-10-20 22:00',end:'2026-10-20 23:00',next:'DevOps · 已回滚,待复盘',mine:false},
+ {id:'CMP-2026-000131',title:'搜索服务索引分片调整',service:'search-service',version:'shards=12',status:'done',risk:'low',start:'2026-10-19 21:00',end:'2026-10-19 22:00',next:'已完成并关闭',mine:false},
+];
+const state={view:'dashboard',scope:'open',q:''};
+const favs=new Set(['ledger-service']);
+const isOpen=c=>!['done','failed'].includes(c.status);
+
+const pill=(map,key)=>`<span class="pill ${map[key][1]}">${map[key][0]}</span>`;
+const accent=c=>c.status==='failed'||c.risk==='high'?'var(--stop)':c.status==='review'?'var(--wait-edge)':'transparent';
+const row=c=>`<tr style="--row-accent:${accent(c)}"><td><strong class="mono">${esc(c.id)}</strong><span class="sub">${esc(c.title)}</span></td><td><strong>${esc(c.service)}</strong><span class="sub mono">${esc(c.version)} · Prod</span></td><td>${pill(STATUS,c.status)}<span class="sub">${esc(c.next)}</span></td><td><span class="tag ${RISK[c.risk][1]}">${RISK[c.risk][0]}</span></td><td><span class="mono">${c.start.slice(5)} → ${c.end.slice(11)}</span></td><td><button class="btn sm" data-view-id="${esc(c.id)}" aria-label="View ${esc(c.id)}">View</button></td></tr>`;
+const empty=n=>`<tr><td class="empty" colspan="${n}">No changes match these filters. Try clearing the search or filters.</td></tr>`;
+
+function matches(c){
+  const q=(state.q||'').trim().toLowerCase();
+  return `${c.id} ${c.title} ${c.service} ${c.version}`.toLowerCase().includes(q);
+}
+function renderDashboard(){
+  const open=changes.filter(isOpen), mine=changes.filter(c=>c.mine), high=open.filter(c=>c.risk==='high'), failed=changes.filter(c=>c.status==='failed');
+  $('#kpis').innerHTML=[
+    ['Open changes',open.length,'not completed',''],['Waiting on me',mine.length,'need review',''],
+    ['High risk',high.length,'open · Red Lines',high.length?'stop':''],['Rolled back',failed.length,'last 7 days',failed.length?'stop':''],['Success rate','98.4%','30 days · simulated','']
+  ].map(([k,v,s,cls])=>`<div class="kpi ${cls}"><span class="kk">${k}</span><span class="kv">${v}</span><span class="ks">${s}</span></div>`).join('');
+  const list=mine.filter(matches);
+  $('#rows-action').innerHTML=list.length?list.map(row).join(''):empty(6);
+  $('#action-hint').textContent=`${list.length} of ${mine.length}`;
+  $('#upcoming').innerHTML=[...open].sort((a,b)=>a.start.localeCompare(b.start)).map(c=>`<li class="${c.status==='running'?'now':''}"><time>${c.start} → ${c.end.slice(11)}</time><strong>${esc(c.service)}</strong> · ${esc(c.title)}</li>`).join('');
+}
+function renderChanges(){
+  const sv=$('#f-service').value, rk=$('#f-risk').value;
+  const base=changes.filter(c=>(!sv||c.service===sv)&&(!rk||c.risk===rk)&&matches(c));
+  const scopes=[['open','All open',base.filter(isOpen)],['mine','Waiting on me',base.filter(c=>c.mine)],['all','Everything',base]];
+  $('#tabs').innerHTML=scopes.map(([k,l,a])=>`<button aria-pressed="${state.scope===k}" data-scope="${k}">${l}<span class="n">${a.length}</span></button>`).join('');
+  const shown=scopes.find(s=>s[0]===state.scope)[2];
+  $('#rows').innerHTML=shown.length?shown.map(row).join(''):empty(6);
+  $('#count').textContent=`${shown.length?'1–'+shown.length:'0'} of ${shown.length} changes`;
+}
+function renderServices(){
+  const q=($('#sq').value||'').trim().toLowerCase();
+  const names=[...new Set(changes.map(c=>c.service))].filter(n=>n.includes(q));
+  $('#svc-grid').innerHTML=names.length?names.map(n=>{const o=changes.filter(c=>c.service===n&&isOpen(c)), h=o.filter(c=>c.risk==='high').length, fav=favs.has(n);
+    return `<article class="card svc"><h3>${esc(n)}</h3><p>Owner: Platform Engineering · ${TIER[n]||'Tier 2'}. ${o.length} open change(s)${h?`, ${h} high risk`:''}.</p><footer><span class="mono">${esc(n.split('-')[0])}</span>${h?'<span class="tag stop">High risk</span>':''}<button class="star" data-fav="${esc(n)}" aria-pressed="${fav}" aria-label="${fav?'Unfavorite':'Favorite'} ${esc(n)}">${fav?'★':'☆'}</button></footer></article>`;}).join('')
+    :'<p class="muted">No services match your search.</p>';
+}
+function render(){ $('#nav-action').textContent=changes.filter(c=>c.mine).length; ({dashboard:renderDashboard,changes:renderChanges,services:renderServices})[state.view](); }
+
+function show(view){
+  state.view=['dashboard','changes','services'].includes(view)?view:'dashboard';
+  $$('[data-page]').forEach(s=>s.hidden=s.dataset.page!==state.view);
+  $$('.navitem').forEach(a=>a.dataset.view===state.view?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  $('#crumb').textContent={dashboard:'Dashboard',changes:'Changes',services:'Services'}[state.view];
+  closeNav(false); render();
+}
+function openDetail(id){
+  const c=changes.find(x=>x.id===id); if(!c) return;
+  $('#d-title').textContent=c.id;
+  const idx=STAGE[c.status];
+  const steps=STEPS.map((s,i)=>{const cls=c.status==='failed'&&i===idx?'fail':i<idx||(c.status==='done'&&i===idx)?'done':i===idx?'now':'';return `<li class="${cls}"><strong>${s}</strong></li>`;}).join('');
+  $('#d-body').innerHTML=`<p style="margin-bottom:16px"><strong>${esc(c.title)}</strong></p>
+    <dl class="kv-list"><dt>Status</dt><dd>${pill(STATUS,c.status)}</dd><dt>Risk</dt><dd><span class="tag ${RISK[c.risk][1]}">${RISK[c.risk][0]}</span></dd><dt>Service</dt><dd>${esc(c.service)}</dd><dt>Version</dt><dd class="mono">${esc(c.version)}</dd><dt>Window</dt><dd class="mono">${c.start} → ${c.end.slice(11)} · UTC+8</dd><dt>Next step</dt><dd>${esc(c.next)}</dd></dl>
+    <h3 style="margin:24px 0 12px">Progress</h3><ol class="spine">${steps}</ol>`;
+  $('#drawer').showModal();
+}
+function notify(msg){const n=$('#feedback');n.textContent=msg;n.hidden=false;}
+
+/* events */
+document.addEventListener('click',e=>{
+  const v=e.target.closest('[data-view-id]'); if(v) openDetail(v.dataset.viewId);
+  const sc=e.target.closest('[data-scope]'); if(sc){state.scope=sc.dataset.scope;renderChanges();}
+  const fv=e.target.closest('[data-fav]'); if(fv){favs.has(fv.dataset.fav)?favs.delete(fv.dataset.fav):favs.add(fv.dataset.fav);renderServices();}
+  if(e.target.closest('[data-new]')){$('#new-form').reset();$('#new-dlg').showModal();}
+  const cl=e.target.closest('[data-close]'); if(cl) cl.closest('dialog').close();
+  if(e.target.matches('dialog')) e.target.close();           /* click on backdrop */
+  if(e.target===document.body) closeNav();                    /* click on mobile overlay */
+});
+['#q','#q2'].forEach(id=>$(id).addEventListener('input',e=>{state.q=e.target.value;$('#q').value=$('#q2').value=state.q;render();}));
+['#f-service','#f-risk'].forEach(id=>$(id).addEventListener('change',renderChanges));
+$('#sq').addEventListener('input',renderServices);
+$('#clear').addEventListener('click',()=>{state.q='';$('#q').value=$('#q2').value='';$('#f-service').value=$('#f-risk').value='';renderChanges();notify('Search and filters cleared.');});
+$('#new-form').addEventListener('submit',e=>{
+  const f=new FormData(e.currentTarget), title=String(f.get('title')).trim();
+  if(!title){e.preventDefault();return;}
+  const n=String(145+changes.length-6).padStart(6,'0');
+  changes.unshift({id:'CMP-2026-'+n,title,service:String(f.get('service')),version:'TBD',status:'draft',risk:String(f.get('risk')),start:'2026-10-25 22:00',end:'2026-10-26 00:00',next:'Owner · 补充实施与回滚方案',mine:false});
+  state.scope='all';render();notify(`CMP-2026-${n} created as a local draft.`);
+});
+$('#theme').addEventListener('click',()=>{const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('#theme').textContent=dark?'Light':'Dark';$('#theme').setAttribute('aria-pressed',String(dark));});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeNav();
+  if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();$('#q').focus();}
+});
+
+/* mobile navigation */
+const mobile=matchMedia('(max-width:760px)');
+function syncNav(){const open=document.body.classList.contains('nav-open');$('#menu').setAttribute('aria-expanded',String(open));$('#rail').inert=mobile.matches&&!open;}
+function closeNav(focus=true){if(!document.body.classList.contains('nav-open'))return syncNav();document.body.classList.remove('nav-open');syncNav();if(focus)$('#menu').focus();}
+$('#menu').addEventListener('click',()=>{document.body.classList.add('nav-open');syncNav();$('.navitem').focus();});
+mobile.addEventListener('change',()=>{document.body.classList.remove('nav-open');syncNav();});
+
+/* init */
+const services=[...new Set(changes.map(c=>c.service))];
+$('#f-service').insertAdjacentHTML('beforeend',services.map(s=>`<option>${s}</option>`).join(''));
+$('#n-service').innerHTML=services.map(s=>`<option>${s}</option>`).join('');
+window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+syncNav(); show(location.hash.slice(1));
+</script>
+</body>
+</html>

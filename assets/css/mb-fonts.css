@@ -1,0 +1,48 @@
+/*
+ * MB Corpo web fonts + composite families for Chinese/Latin mixed UI.
+ * Fonts for Daimler AG use only. Keep ../fonts/ beside this css/ folder.
+ *
+ * Use the composite families, never the raw MB Corpo names:
+ *   "MB Text"        S Text 400/700 (DEFAULT: body and headings) + Han face, no size-adjust
+ *   "MB Title"       A Title Cond 400 (condensed serif, optional) + Han face, size-adjust 94%
+ *   "MB Title Sans"  S Title 300/700 (light sans, optional)       + Han face, size-adjust 94%
+ *
+ * MB Corpo has no Han glyphs. Each family declares a Han face pinned to a paired sans via unicode-range,
+ * so Chinese never falls to a random system face. Faces declared later win inside their unicode-range,
+ * so the Han faces come after the Latin faces.
+ *
+ * local() matches a font's FULL name or POSTSCRIPT name, not its family name.
+ * local("PingFang SC") silently fails in Chrome/macOS; "PingFangSC-Regular" / "PingFang SC Semibold" work.
+ * That is why every Han list below spells out full and PostScript names.
+ */
+
+@font-face{font-family:"MB Title";font-weight:400;font-style:normal;font-display:swap;
+  src:url("../fonts/MBCorpoATitleCond-Regular-Web.woff2") format("woff2")}
+@font-face{font-family:"MB Title Sans";font-weight:300;font-style:normal;font-display:swap;
+  src:url("../fonts/MBCorpoSTitle-Light-Web.woff2") format("woff2")}
+@font-face{font-family:"MB Title Sans";font-weight:700;font-style:normal;font-display:swap;
+  src:url("../fonts/MBCorpoSTitle-Bold-Web.woff2") format("woff2")}
+@font-face{font-family:"MB Text";font-weight:400;font-style:normal;font-display:swap;
+  src:url("../fonts/MBCorpoSText-Regular-Web.woff2") format("woff2")}
+@font-face{font-family:"MB Text";font-weight:700;font-style:normal;font-display:swap;
+  src:url("../fonts/MBCorpoSText-Bold-Web.woff2") format("woff2")}
+
+/* Han faces. U+2014 and U+2026 belong to the Han face; other general punctuation stays Latin. */
+@font-face{font-family:"MB Title";font-weight:400;font-style:normal;font-display:swap;
+  src:local("Source Han Sans SC"),local("SourceHanSansSC-Regular"),local("Noto Sans SC"),local("NotoSansSC-Regular"),local("Noto Sans CJK SC"),local("NotoSansCJKsc-Regular"),local("PingFangSC-Regular"),local("PingFang SC Regular"),local("Microsoft YaHei");
+  unicode-range:U+2014,U+2026,U+2E80-33FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+20000-3134F;
+  size-adjust:94%}
+@font-face{font-family:"MB Title Sans";font-weight:300;font-style:normal;font-display:swap;
+  src:local("Source Han Sans SC Light"),local("SourceHanSansSC-Light"),local("Noto Sans SC Light"),local("NotoSansSC-Light"),local("Noto Sans CJK SC Light"),local("NotoSansCJKsc-Light"),local("PingFangSC-Light"),local("PingFang SC Light"),local("Microsoft YaHei Light"),local("Microsoft YaHei");
+  unicode-range:U+2014,U+2026,U+2E80-33FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+20000-3134F;
+  size-adjust:94%}
+@font-face{font-family:"MB Title Sans";font-weight:700;font-style:normal;font-display:swap;
+  src:local("Source Han Sans SC Bold"),local("SourceHanSansSC-Bold"),local("Noto Sans SC Bold"),local("NotoSansSC-Bold"),local("Noto Sans CJK SC Bold"),local("NotoSansCJKsc-Bold"),local("PingFangSC-Semibold"),local("PingFang SC Semibold"),local("Microsoft YaHei Bold");
+  unicode-range:U+2014,U+2026,U+2E80-33FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+20000-3134F;
+  size-adjust:94%}
+@font-face{font-family:"MB Text";font-weight:400;font-style:normal;font-display:swap;
+  src:local("Source Han Sans SC"),local("SourceHanSansSC-Regular"),local("Noto Sans SC"),local("NotoSansSC-Regular"),local("Noto Sans CJK SC"),local("NotoSansCJKsc-Regular"),local("PingFangSC-Regular"),local("PingFang SC Regular"),local("Microsoft YaHei");
+  unicode-range:U+2014,U+2026,U+2E80-33FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+20000-3134F}
+@font-face{font-family:"MB Text";font-weight:700;font-style:normal;font-display:swap;
+  src:local("Source Han Sans SC Bold"),local("SourceHanSansSC-Bold"),local("Noto Sans SC Bold"),local("NotoSansSC-Bold"),local("Noto Sans CJK SC Bold"),local("NotoSansCJKsc-Bold"),local("PingFangSC-Semibold"),local("PingFang SC Semibold"),local("Microsoft YaHei Bold");
+  unicode-range:U+2014,U+2026,U+2E80-33FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF,U+20000-3134F}

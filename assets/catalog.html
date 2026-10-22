@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mercedes-Benz prototype · component catalog</title>
+<link rel="stylesheet" href="css/mb-fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+/* Catalog-only layout. Components themselves live in css/components.css. */
+.cat{max-width:1100px;margin:0 auto;padding:24px 24px 64px}
+.cat section{margin-bottom:40px}
+.cat h2.sec{font-family:var(--font-text);font-size:var(--fs-16);font-weight:700;padding-bottom:8px;margin-bottom:16px;border-bottom:1px solid var(--rule)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.sw{border:1px solid var(--rule);background:var(--surface)}
+.sw i{display:block;height:44px;border-bottom:1px solid var(--rule)}
+.sw span{display:block;padding:6px 8px;font-size:var(--fs-12)}
+.spec{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px 16px;align-items:baseline}
+.spec>b{font-size:var(--fs-12);color:var(--ink-2);font-weight:400}
+.cat-top{display:flex;align-items:center;gap:16px;margin-bottom:32px}
+.cat-top .btn{margin-left:auto}
+</style>
+</head>
+<body>
+<div class="cat">
+  <div class="cat-top"><div><div class="eyebrow">Mercedes-Benz prototype skill</div><h1 class="page-title">Component catalog</h1></div><button class="btn" id="theme" aria-pressed="false">Dark</button></div>
+
+  <section aria-labelledby="s-type"><h2 class="sec" id="s-type">Typography · MB Title / MB Text</h2>
+    <div class="spec">
+      <b>Page title · 32 / 400</b><div class="page-title">Change Management 变更管理 2026</div>
+      <b>KPI value · 34 / 400</b><div style="font-family:var(--font-display);font-size:var(--fs-34);font-variant-numeric:tabular-nums">128 · 99.95%</div>
+      <b>Section · 16 / 700</b><div class="sect-title">Needs your action 待处理事项</div>
+      <b>Body · 14 / 400</b><div>Approved, in review, waiting on SRE. 已批准、评审中、等待 SRE 处理 — 中英混排基线对齐。</div>
+      <b>Body bold · 14 / 700</b><div><strong>Bold emphasis 加粗强调 700</strong></div>
+      <b>Caption · 12 / 400</b><div class="muted" style="font-size:var(--fs-12)">Secondary text uses the same ink at 74% opacity, not a new gray.</div>
+      <b>Eyebrow · 12 / 400</b><div class="eyebrow">Operations / China</div>
+      <b>Data · mono</b><div class="mono">CMP-2026-000144 · 10-22 22:00 → 01:00</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-color"><h2 class="sec" id="s-color">Color roles (L3 aliases → application tokens)</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:var(--ground)"></i><span>--ground · page</span></div>
+      <div class="sw"><i style="background:var(--surface-3)"></i><span>--surface-3 · band / table head</span></div>
+      <div class="sw"><i style="background:var(--surface)"></i><span>--surface · panel</span></div>
+      <div class="sw"><i style="background:var(--surface-2)"></i><span>--surface-2 · control</span></div>
+      <div class="sw"><i style="background:var(--ink)"></i><span>--ink · text</span></div>
+      <div class="sw"><i style="background:var(--rule)"></i><span>--rule · outline</span></div>
+      <div class="sw"><i style="background:var(--accent)"></i><span>--accent · primary</span></div>
+      <div class="sw"><i style="background:var(--chrome)"></i><span>--chrome · rail</span></div>
+      <div class="sw"><i style="background:var(--go)"></i><span>--go · success</span></div>
+      <div class="sw"><i style="background:var(--wait-edge)"></i><span>--wait-edge · warning</span></div>
+      <div class="sw"><i style="background:var(--stop)"></i><span>--stop · error</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-btn"><h2 class="sec" id="s-btn">Buttons and fields</h2>
+    <div class="row" style="margin-bottom:16px">
+      <button class="btn primary">Primary</button><button class="btn">Default</button><button class="btn danger">Danger</button>
+      <button class="btn sm">Small 24</button><button class="btn lg">Large 40</button><button class="btn" disabled>Disabled · .38</button><button class="btn icon" aria-label="Menu">☰</button>
+    </div>
+    <p class="hint" style="margin-bottom:16px">Every control is 32px high by default (measured on the real select); 24 and 40 are the small and large sizes. Radius 4px, text 14px.</p>
+    <div class="row" style="align-items:flex-start">
+      <label class="field">Text<input value="search-service" style="width:200px"></label>
+      <label class="field">Select<select style="width:200px"><option>Prod</option><option>Stage</option></select></label>
+      <label class="field">Error<input value="" aria-invalid="true" style="width:200px;border-color:var(--stop)"><span class="err">Required field</span></label>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-tabs"><h2 class="sec" id="s-tabs">Tabs and status</h2>
+    <div class="tabs" role="group" aria-label="Demo tabs"><button aria-pressed="true">All open <span class="n">10</span></button><button aria-pressed="false">Waiting on me <span class="n">4</span></button><button aria-pressed="false">Everything <span class="n">21</span></button></div>
+    <div class="row" style="margin-bottom:12px"><span class="pill">Draft</span><span class="pill wait">SRE review</span><span class="pill go">Approved</span><span class="pill info">In progress</span><span class="pill stop">Rolled back</span></div>
+    <div class="row"><span class="tag go">Low</span><span class="tag wait">Medium</span><span class="tag stop">High</span><span class="tag">R3</span></div>
+  </section>
+
+  <section aria-labelledby="s-kpi"><h2 class="sec" id="s-kpi">KPI strip · hairlines, no cards</h2>
+    <div class="kpis">
+      <div class="kpi"><span class="kk">Open changes</span><span class="kv">12</span><span class="ks">not completed</span></div>
+      <div class="kpi"><span class="kk">Waiting on me</span><span class="kv">4</span><span class="ks">need review</span></div>
+      <div class="kpi stop"><span class="kk">High risk</span><span class="kv">2</span><span class="ks">open · Red Lines</span></div>
+      <div class="kpi"><span class="kk">Success rate</span><span class="kv">98.4%</span><span class="ks">30 days</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-table"><h2 class="sec" id="s-table">Table · row accent bar</h2>
+    <div class="table-wrap"><table class="grid" style="min-width:640px"><thead><tr><th scope="col">Change</th><th scope="col">Status</th><th scope="col" class="num-col">Duration</th></tr></thead><tbody>
+      <tr style="--row-accent:var(--stop)"><td><strong class="mono">CMP-2026-000138</strong><span class="sub">账务库 PostgreSQL 14 → 16</span></td><td><span class="pill wait">SRE review</span><span class="sub">待评审 Red Lines</span></td><td class="num-col">120 min</td></tr>
+      <tr style="--row-accent:var(--wait-edge)"><td><strong class="mono">CMP-2026-000144</strong><span class="sub">搜索集群 AKS 升级</span></td><td><span class="pill info">In progress</span><span class="sub">剩余 25 min</span></td><td class="num-col">180 min</td></tr>
+      <tr><td><strong class="mono">CMP-2026-000131</strong><span class="sub">索引分片调整</span></td><td><span class="pill go">Completed</span></td><td class="num-col">60 min</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section aria-labelledby="s-prog"><h2 class="sec" id="s-prog">Progress and spine</h2>
+    <div class="row" style="align-items:flex-start;gap:48px">
+      <div style="width:260px;display:grid;gap:12px"><div class="bar" role="img" aria-label="60 percent"><span style="--p:60%"></span></div><div class="bar go" role="img" aria-label="100 percent"><span style="--p:100%"></span></div><div class="bar stop" role="img" aria-label="35 percent"><span style="--p:35%"></span></div></div>
+      <ol class="spine" style="width:260px"><li class="done"><strong>Submitted</strong><time>10-21 09:12</time></li><li class="done"><strong>SRE review</strong><time>10-21 14:30</time></li><li class="now"><strong>Executing</strong><time>10-21 23:00</time></li><li><strong>Completed</strong></li></ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-portal"><h2 class="sec" id="s-portal">Portal pieces (from the real SmartOps Portal) and logo</h2>
+    <div class="row" style="margin-bottom:16px;align-items:flex-start;gap:24px">
+      <div style="background:var(--chrome);color:var(--chrome-ink);padding:16px 20px;display:flex;align-items:center;gap:12px;border:1px solid var(--chrome-rule)">
+        <svg viewBox="0 0 38 38" fill="currentColor" width="38" height="38" role="img" aria-label="Mercedes-Benz"><path d="M35.4544465,9.4999895c-1.6675854-2.8883456-4.0661211-5.2869461-6.9544707-6.9545288C25.6116245.8778901,22.3351164-.0000113,18.9999602-.0000113s-6.6116643.8779014-9.500013,2.5454718c-2.8883495,1.6675829-5.2868861,4.0661834-6.9544579,6.954529C.8779042,12.3883351.0000007,15.6648388.0000007,18.9999905s.8779036,6.6116553,2.5454887,9.4999991c1.6675717,2.8883438,4.0661088,5.2869456,6.9544579,6.9545142,2.8883495,1.6675832,6.1648567,2.545485,9.500013,2.545485s6.6116643-.8779018,9.5000139-2.545485c2.8883514-1.6675685,5.2868871-4.0661704,6.9544725-6.954516,1.6676402-2.8883456,2.5455542-6.1648474,2.5455542-9.5000009s-.8779834-6.6116553-2.5455542-9.4999973ZM1.8999571,18.9999905c0-3.0017169.7901239-5.9505479,2.290984-8.5499634,1.5007929-2.5995498,3.6594907-4.7581912,6.259044-6.2591026,2.444813-1.4115102,5.19865-2.1943806,8.0147432-2.2824819l-2.1816223,15.5229389L3.9306169,27.082194c-1.331722-2.4829084-2.0306614-5.2591831-2.0306598-8.0822035ZM27.550001,33.8090561c-2.5995542,1.5007927-5.5483874,2.2908612-8.5500426,2.2908612s-5.9504747-.7900685-8.5499741-2.2908612c-2.444813-1.4115093-4.499631-3.4050629-5.984056-5.7997344l14.5340301-5.872124,14.5341123,5.872124c-1.4844378,2.3946733-3.5392558,4.3882251-5.9840697,5.7997344ZM34.0693811,27.0821921l-12.3525704-9.6508126-2.1816059-15.5229372c2.8161461.0881012,5.569986.8709716,8.014798,2.282482,2.5994866,1.5009119,4.7581991,3.6595529,6.2589902,6.2591026,1.5008605,2.5994155,2.2909849,5.5483799,2.2909849,8.5499634,0,2.8230204-.6989524,5.5992951-2.0305968,8.0822017Z"/></svg>
+        <div><div style="font-size:var(--fs-20);line-height:1.1">Mercedes-Benz</div><div class="eyebrow" style="color:var(--chrome-muted);margin-top:4px">Change Management</div></div>
+      </div>
+      <label class="search-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="sr-only">Search services</span><input placeholder="Search services"></label>
+      <button class="fab" style="position:static" aria-label="Support">?</button>
+    </div>
+    <div class="svc-grid">
+      <article class="card svc"><h3>EV File Control</h3><p>EV data analysis, data recording &amp; reporting, vehicle control, safety checks.</p><footer><span class="mono">EVFC</span><button class="star" aria-pressed="false" aria-label="Favorite">☆</button></footer></article>
+      <article class="card svc"><h3>China Docker Hub</h3><p>View Docker image details, key information, image change logs.</p><footer><span class="mono">MIC Docker Hub</span><button class="star" aria-pressed="true" aria-label="Unfavorite">★</button></footer></article>
+      <article class="card svc"><h3>API Document</h3><p></p><footer><span class="mono">API DOC</span><button class="star" aria-pressed="false" aria-label="Favorite">☆</button></footer></article>
+    </div>
+    <p class="hint" style="margin-top:12px">Card 8px and the 16px group are container shapes; the search pill and support button are the only pill/circle controls. Teal (--accent-2) appears only on the search icon and the support button.</p>
+  </section>
+
+  <section aria-labelledby="s-launch"><h2 class="sec" id="s-launch">Launchpad · group (16px) holding tiles (8px)</h2>
+    <div class="group">
+      <h3 class="bar-title">RC</h3>
+      <div class="tile-grid">
+        <button class="tile"><span class="ico" aria-hidden="true">▣</span><h3>RC Tooling Access</h3><p>Apply for the access to RC Change Management Tool</p></button>
+        <button class="tile"><span class="ico" aria-hidden="true">▣</span><h3>Change Management</h3><p>Submit and track changes</p></button>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:12px">Group radius measured 15px, tile about 8px, tile padding 16, icon 32px, tile gap 16 / 24. The group title carries a 3px accent bar.</p>
+  </section>
+
+  <section aria-labelledby="s-ovl"><h2 class="sec" id="s-ovl">Drawer, modal, notice</h2>
+    <div class="row" style="margin-bottom:12px"><button class="btn" data-open="drawer">Open drawer</button><button class="btn" data-open="modal">Open modal</button></div>
+    <p class="notice">Simulated data · records reset on reload.</p>
+  </section>
+</div>
+
+<dialog class="drawer" id="drawer" aria-labelledby="dr-t"><div class="dlg-head"><h2 id="dr-t">CMP-2026-000144</h2><button class="btn icon" data-close aria-label="Close">×</button></div><div class="dlg-body"><dl class="kv-list"><dt>Status</dt><dd><span class="pill wait">SRE review</span></dd><dt>Service</dt><dd>search-service</dd><dt>Window</dt><dd class="mono">10-22 22:00 → 01:00</dd></dl></div></dialog>
+<dialog class="modal" id="modal" aria-labelledby="md-t"><div class="dlg-head"><h2 id="md-t">New change</h2><button class="btn icon" data-close aria-label="Close">×</button></div><div class="dlg-body"><label class="field">Title<input placeholder="Describe the planned change"></label></div><div class="dlg-foot"><button class="btn" data-close>Cancel</button><button class="btn primary" data-close>Create</button></div></dialog>
+
+<script>
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-open]'); if(o) document.getElementById(o.dataset.open).showModal();
+  const c=e.target.closest('[data-close]'); if(c) c.closest('dialog').close();
+  if(e.target.matches('dialog')) e.target.close();
+});
+document.getElementById('theme').addEventListener('click',e=>{const d=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=d?'dark':'light';e.currentTarget.textContent=d?'Light':'Dark';e.currentTarget.setAttribute('aria-pressed',String(d));});
+</script>
+</body>
+</html>

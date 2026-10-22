@@ -1,0 +1,146 @@
+/*
+ * Mercedes-Benz prototype tokens.
+ *
+ *  L1  --color-brand-*        brand scale, READ ONLY. Never used in feature CSS.
+ *  L2  --color-application-*  semantic roles. The only colors feature code may reference.
+ *  L3  --ground / --surface / --ink ...  short aliases derived from L2 only (CMP prototype names).
+ *
+ * Theme switch: <html data-theme="light|dark">. Dark is pure #000 with hairline outlines.
+ * Light builds its own ladder: background 100 -> band -> surface 50 -> control white.
+ */
+
+:root, :root[data-theme="light"]{
+  color-scheme:light;
+
+  /* L1 brand scale (mb grey) and base status colors. Reference only. */
+  --color-brand-grey-50:#F8F8F8;  --color-brand-grey-100:#E8E8E8; --color-brand-grey-200:#C9C9C9;
+  --color-brand-grey-300:#ADADAD; --color-brand-grey-400:#919191; --color-brand-grey-500:#767676;
+  --color-brand-grey-600:#5C5C5C; --color-brand-grey-700:#424242; --color-brand-grey-800:#262626;
+  --color-brand-grey-900:#0D0D0D;
+  --color-brand-blue-500:#0078D6;
+  --color-base-red-500:#D92121; --color-base-green-600:#198025; --color-base-yellow-500:#E8BD00;
+
+  /* L2 application semantics */
+  --color-application-background:var(--color-brand-grey-100);
+  --color-application-surface:var(--color-brand-grey-50);
+  --color-application-control:#FFFFFF;
+  --color-application-band:#F0F0F0;
+  --color-application-on-surface:var(--color-brand-grey-900);
+  --color-application-primary:var(--color-brand-blue-500);
+  --color-application-on-primary:#FFFFFF;
+  --color-application-primary-text:var(--color-brand-blue-500);
+  --color-application-outline:var(--color-brand-grey-200);
+  --color-application-chrome:#000000;
+  --color-application-on-chrome:#FFFFFF;
+  --color-application-success:var(--color-base-green-600);
+  --color-application-error:var(--color-base-red-500);
+  --color-application-warning:var(--color-base-yellow-500);
+  --color-application-on-warning:#52400D;
+  --color-application-secondary:#20A79C;
+  --color-application-shadow:0 2px 8px rgb(0 0 0 / .06);
+
+  /* L3 aliases */
+  --ground:var(--color-application-background);
+  --surface:var(--color-application-surface);
+  --surface-2:var(--color-application-control);
+  --surface-3:var(--color-application-band);
+  --ink:var(--color-application-on-surface);
+  --ink-2:color-mix(in oklab,var(--ink) 74%,var(--surface));
+  --ink-3:color-mix(in oklab,var(--ink) 60%,var(--surface));
+  --rule:var(--color-application-outline);
+  --accent:var(--color-application-primary);
+  --accent-ink:var(--color-application-on-primary);
+  --accent-text:var(--color-application-primary-text);
+  --accent-soft:color-mix(in oklab,var(--accent) 8%,var(--surface));
+  --accent-2:var(--color-application-secondary);   /* teal: search icon and support button only, as in the real portal */
+  --focus:var(--accent-text);
+  --chrome:var(--color-application-chrome);
+  --chrome-ink:var(--color-application-on-chrome);
+  --chrome-muted:color-mix(in oklab,var(--chrome-ink) 74%,var(--chrome));
+  --chrome-rule:color-mix(in oklab,var(--chrome-ink) 38%,var(--chrome));
+  --silver:var(--color-application-outline);
+
+  --go:var(--color-application-success);
+  --go-bg:color-mix(in oklab,var(--go) 7%,var(--surface));
+  --go-edge:color-mix(in oklab,var(--go) 30%,var(--surface));
+  --stop:var(--color-application-error);
+  --stop-bg:color-mix(in oklab,var(--stop) 7%,var(--surface));
+  --stop-edge:color-mix(in oklab,var(--stop) 30%,var(--surface));
+  --wait:var(--color-application-on-warning);
+  --wait-bg:color-mix(in oklab,var(--color-application-warning) 16%,var(--surface));
+  --wait-edge:var(--color-application-warning);
+  --info:var(--accent-text);
+  --info-bg:var(--accent-soft);
+  --info-edge:color-mix(in oklab,var(--accent) 30%,var(--surface));
+  --idle:var(--ink-2);
+  --idle-bg:var(--surface-3);
+  --idle-edge:var(--rule);
+  --on-stop:#FFFFFF;
+
+  /* Container surfaces (cards, panels, table wrappers, dialogs) use a soft edge plus a light shadow, as in the real
+     SmartOps cards. Controls keep --rule. In dark everything is black, so the edge is the full outline and there is no shadow. */
+  --rule-soft:color-mix(in oklab,var(--rule) 55%,var(--surface-2));
+  --shadow:none;
+  --shadow-card:0 1px 4px rgb(0 0 0 / .12);
+  --shadow-card-hover:0 2px 8px rgb(0 0 0 / .16);
+  --shadow-lg:var(--color-application-shadow);
+
+  /* Type. The real Mercedes software (CMP, SmartOps Portal) sets headings in a plain sans at regular weight,
+     so display = text. Optional brand faces: --font-display-serif (A Title Cond) and --font-display-light (S Title 300). */
+  --font-text:"MB Text","Source Sans 3","Noto Sans SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --font-display:var(--font-text);
+  --font-display-serif:"MB Title","Roboto Condensed","Arial Narrow",Arial,serif;
+  --font-display-light:"MB Title Sans","Source Sans 3","Noto Sans SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --font-data:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+
+  /* Scale. Only 400 / 700 weights (300 only with --font-display-light). Display weight is 400. */
+  --fs-12:12px; --fs-14:14px; --fs-16:16px; --fs-20:20px; --fs-24:24px; --fs-26:26px;
+  --fs-32:32px; --fs-34:34px; --fs-48:48px;
+
+  /* Shape and space, measured on the real Mercedes systems (SmartOps portal, RC tooling form, DevTools values).
+     Three radius tiers:
+       controls  --radius        4px   buttons, inputs, selects, tags, rows. Element Plus base radius (var unresolved in the capture, framework default).
+       cards     --radius-card   8px   cards and tiles, panels, table wrappers, dialogs (portal card about 8px, tile about 8px).
+       groups    --radius-group  16px  a white section that holds cards. Measured 15px (.group border-radius), snapped to 16.
+     The search field is a pill. Dots, avatars and the support button are circles (50%). Inner radius is never larger than the outer.
+     Controls share one height: 32px measured (.el-select__wrapper min-height). 24 and 40 are the Element Plus small and large sizes (inferred). */
+  --radius:4px;
+  --radius-card:8px;
+  --radius-group:16px;
+  --radius-pill:999px;
+  --control-h:32px; --control-h-sm:24px; --control-h-lg:40px;
+  /* Select arrow. The native arrow is about 16px wide and sits inside the right padding, so with 8px of padding the text touches it.
+     Selects use appearance:none, padding 0 32px 0 12px and this icon at right 10px: 6px between text and arrow (Element select gap: 6px, measured). */
+  --icon-chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236B6B6B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  /* Spacing scale. Card grids use 16px between columns and 24px between rows. */
+  --space-1:4px; --space-2:8px; --space-3:16px; --space-4:24px; --space-5:32px; --space-6:48px; --space-7:64px;
+  --opacity-high:1; --opacity-on-color:.74; --opacity-medium:.6; --opacity-disabled:.38;
+
+  --rail-w:256px;
+  --topbar-h:54px;
+  --content-max:1680px;
+}
+
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --color-application-background:#000000;
+  --color-application-surface:#000000;
+  --color-application-control:#000000;
+  --color-application-band:#000000;
+  --color-application-on-surface:#FFFFFF;
+  /* Spec keeps primary at #0078D6 in dark (about 4.3:1 on black). Small blue text uses the lighter text token. */
+  --color-application-primary-text:#4DA6F5;
+  --color-application-success:#5CCB74;
+  --color-application-error:#FF7D73;
+  --color-application-on-warning:var(--color-application-warning);
+  --color-application-shadow:0 0 0 1px var(--color-brand-grey-200);
+  --rule-soft:var(--rule);
+  --icon-chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23C9C9C9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  --shadow-card:none;
+  --shadow-card-hover:none;
+  --info:var(--ink);
+  --info-bg:var(--surface);
+  --info-edge:var(--accent);
+  --accent-soft:color-mix(in oklab,var(--accent) 22%,var(--surface));
+  --on-stop:#000000;
+}
